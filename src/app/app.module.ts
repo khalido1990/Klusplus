@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
+
 // Components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,13 +16,18 @@ import { MenuComponent } from './menu/menu.component';
 
 // Routing
 import {RouterModule, Routes} from '@angular/router';
+
+// Material
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-
+import {MatInputModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatSortModule} from '@angular/material/sort';
+import {MatTableModule} from '@angular/material/table';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -29,7 +35,7 @@ const appRoutes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'repairs', component: RepairsComponent},
   {path: 'tickets', component: TicketsComponent},
-  {path: 'tickets/ticketId', component: TicketDetailsComponent},
+  {path: 'tickets/:ticketId', component: TicketDetailsComponent},
   {path: '**', component: NotfoundComponent}
 ];
 
@@ -57,6 +63,11 @@ const appRoutes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSortModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

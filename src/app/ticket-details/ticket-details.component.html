@@ -1,1 +1,7 @@
-<p>ticket-details works!</p>
+<h2>Ticket details</h2>
+<div *ngIf="ticket">
+  <p>Firstname:{{ ticket.firstName }}</p>
+  <p>Lastname:{{ ticket.lastName }}</p>
+  <p>Datum:{{ ticket.date}}</p>
+
+</div>

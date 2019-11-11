@@ -1,1 +1,20 @@
-<p>tickets works!</p>
+<h1>Tickets</h1>
+
+<!--<div *ngFor="let ticket of tickets; index as ticketId">-->
+<!--  <h3>-->
+<!--    <a [title]="ticket.firstName + ' details'" [routerLink]="['/tickets', ticketId]">-->
+<!--      {{ ticket.firstName }}-->
+<!--    </a>-->
+<!--  </h3>-->
+<!--</div>-->
+
+<table mat-table *ngFor="let ticket of tickets; index as ticketId" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <tr>
+    <th mat-header-cell> Client No. </th>
+  </tr>
+
+  <tr>
+    <td mat-cell > {{ticket.firstName}} </td>
+  </tr>
+</table>
