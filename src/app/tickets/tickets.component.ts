@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource, MatIconRegistry } from '@angular/material';
 import {tickets} from '../../tickets';
+import {Ticket} from '../../ticket';
 
 @Component({
   selector: 'app-tickets',
@@ -7,9 +9,12 @@ import {tickets} from '../../tickets';
   styleUrls: ['./tickets.component.scss']
 })
 export class TicketsComponent implements OnInit {
-  displayedColumns: string[] = ['clientNumber', 'firstName', 'progress', 'color'];
+  displayedColumns: string[] = ['clientNumber', 'firstName', 'lastName', 'progress', 'details'];
   tickets = tickets;
-  constructor() { }
+  displayTickets: MatTableDataSource<Ticket>;
+  constructor() {
+    this.displayTickets = new MatTableDataSource<Ticket>(tickets);
+  }
 
   ngOnInit() {
   }

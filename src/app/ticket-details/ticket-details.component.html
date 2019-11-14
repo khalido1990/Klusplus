@@ -1,7 +1,56 @@
 <h2>Ticket details</h2>
 <div *ngIf="ticket">
-  <p>Firstname:{{ ticket.firstName }}</p>
-  <p>Lastname:{{ ticket.lastName }}</p>
-  <p>Datum:{{ ticket.date}}</p>
-
+  <p>First name: {{ ticket.firstName }}</p>
+  <p>Last name: {{ ticket.lastName }}</p>
+  <p>E-mail: {{ ticket.email }}</p>
+  <p>Mobile Nr.: {{ ticket.mobileNumber }}</p>
+  <p>Client Nr.: {{ ticket.clientNumber }}</p>
+  <p>Ticket Nr.: {{ ticket.ticketNumber }}</p>
+  <p>Category: {{ ticket.category }}</p>
+  <p>Date: {{ ticket.date }}</p>
+  <p>Progress: {{ ticket.progress}}</p>
 </div>
+
+<!--test-->
+<!---
+<table mat-table *ngIf="ticket" [dataSource]="displayTicket" class="mat-table">
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef> First Name </th>
+    <td mat-cell *matCellDef=""> {{ticket.firstName}} </td>
+  </ng-container>
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef> Last Name </th>
+    <td mat-cell *matCellDef=" "> {{ticket.lastName}} </td>
+  </ng-container>
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> E-mail </th>
+    <td mat-cell *matCellDef=" "> {{ticket.email}} </td>
+  </ng-container>
+  <ng-container matColumnDef="mobileNumber">
+    <th mat-header-cell *matHeaderCellDef> Mobile Nr. </th>
+    <td mat-cell *matCellDef=" "> {{ticket.mobileNumber}} </td>
+  </ng-container>
+  <ng-container matColumnDef="clientNumber">
+    <th mat-header-cell *matHeaderCellDef> Client Nr. </th>
+    <td mat-cell *matCellDef=" "> {{ticket.clientNumber}} </td>
+  </ng-container>
+  <ng-container matColumnDef="ticketNumber">
+    <th mat-header-cell *matHeaderCellDef> Ticket Nr. </th>
+    <td mat-cell *matCellDef=" "> {{ticket.ticketNumber}} </td>
+  </ng-container>
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> Category </th>
+    <td mat-cell *matCellDef=" "> {{ticket.category}} </td>
+  </ng-container>
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Date </th>
+    <td mat-cell *matCellDef=" "> {{ticket.date}} </td>
+  </ng-container>
+  <ng-container matColumnDef="progress">
+    <th mat-header-cell *matHeaderCellDef> Progress </th>
+    <td mat-cell *matCellDef=" "> {{ticket.progress}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+-->

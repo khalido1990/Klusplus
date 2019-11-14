@@ -1,0 +1,33 @@
+.form-container {
+  display: block;
+  margin: 0 auto;
+  width: 100vw;
+  height: 90vh;
+  padding-top: 5%;
+  align-items: center;
+  background-color: #cccccc;
+  &__title{
+    margin: 0 auto;
+    width: 80%;
+  }
+  &__form{
+    margin: 0 auto;
+    width: 55%;
+    padding-bottom: 5%;
+  }
+  &__form__input{
+    width: 90%;
+    margin: 5%;
+    border: #e3e3e3 solid 1pt;
+    padding: 5px 15px;
+  }
+  &__form__submit{
+    display: block;
+    background-color: #4A4A4A;
+    border: none;
+    color: #f8f8f8;
+    border-radius: 5px;
+    padding: 5px 25px;
+    margin: 0 auto;
+  }
+}

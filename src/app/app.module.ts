@@ -28,6 +28,7 @@ import {MatInputModule} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
+import {MatProgressBarModule} from '@angular/material';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -68,6 +69,7 @@ const appRoutes: Routes = [
     FormsModule,
     MatSortModule,
     MatTableModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,11 @@
-<!--<div class="example-container">-->
-<!--  <mat-form-field>-->
-<!--    <input matInput placeholder="Input">-->
-<!--  </mat-form-field>-->
-
-<!--  <mat-form-field>-->
-<!--    <textarea matInput placeholder="Textarea"></textarea>-->
-<!--  </mat-form-field>-->
-
-<!--  <mat-form-field>-->
-<!--    <mat-select placeholder="Select">-->
-<!--      <mat-option value="option">Option</mat-option>-->
-<!--    </mat-select>-->
-<!--  </mat-form-field>-->
-<!--</div>-->
-
-
-<!--&lt;!&ndash; Copyright 2019 Google LLC. All Rights Reserved.-->
-<!--    Use of this source code is governed by an MIT-style license that-->
-<!--    can be found in the LICENSE file at http://angular.io/license &ndash;&gt;-->
+<div class="form-container">
+  <h2 class="form-container__title">Contacteer ons!</h2>
+  <form class="form-container__form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <input class="form-container__form__input" type = "text" name = "firstName" placeholder = "First name" formControlName="firstName">
+    <input class="form-container__form__input" type = "text" name = "lastName" placeholder = "Last name" formControlName="lastName">
+    <input class="form-container__form__input" type = "email" name = "email" placeholder = "Email" formControlName="email">
+    <input class="form-container__form__input" type = "text" name = "telNr" placeholder = "Telefoon nr." formControlName="telNr">
+    <textarea class="form-container__form__input" name = "message" placeholder = "Bericht" formControlName="message"></textarea>
+    <button mat-raised-button type="submit" class="form-container__form__submit">Verzenden</button>
+  </form>
+</div>

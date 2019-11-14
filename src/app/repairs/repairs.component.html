@@ -1,1 +1,19 @@
-<p>repairs works!</p>
+<div class="form-container">
+  <h2 class="form-container__title">Reparatie aanvragen</h2>
+  <form class="form-container__form" [formGroup]="repairsForm" (ngSubmit)="onSubmit()">
+    <input class="form-container__form__input" type = "text" name = "firstName" placeholder = "First name" formControlName="firstName">
+    <input class="form-container__form__input" type = "text" name = "lastName" placeholder = "Last name" formControlName="lastName">
+    <input class="form-container__form__input" type = "email" name = "email" placeholder = "Email" formControlName="email">
+    <input class="form-container__form__input" type = "text" name = "telNr" placeholder = "Telefoon nr." formControlName="telNr">
+    <input class="form-container__form__input" type = "date" name = "date" placeholder = "Datum" formControlName="date">
+    <select class="form-container__form__input" name="time" formControlName="time">
+      <option value="">Kies hoelaat</option>
+      <option value="heleDag">Hele dag</option>
+      <option value="ochtend">ochtend</option>
+      <option value="middag">'S middags</option>
+      <option value="avond">'S avonds</option>
+    </select>
+    <textarea class="form-container__form__input" name = "message" placeholder = "Bericht" formControlName="message"></textarea>
+    <button mat-raised-button type="submit" class="form-container__form__submit">Verzenden</button>
+  </form>
+</div>

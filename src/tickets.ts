@@ -6,7 +6,9 @@ export const tickets: Ticket[] = [
     firstName: 'Khalid',
     lastName: 'Dahir',
     mobileNumber: '06-86470687',
-    clientNumber: '1',
+    email: 'khalid@test.nl',
+    clientNumber: 211875,
+    ticketNumber: 88,
     progress: 80,
     category: 'Keuken',
     date: '15-10-2019'
@@ -16,7 +18,9 @@ export const tickets: Ticket[] = [
     firstName: 'Teshale',
     lastName: 'Noorman',
     mobileNumber: '06-86470687',
-    clientNumber: '1',
+    email: 'teshale@test.nl',
+    clientNumber: 211876,
+    ticketNumber: 105,
     progress: 75,
     category: 'Bad',
     date: '26-10-2019'
