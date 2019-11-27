@@ -6,13 +6,14 @@ import { NgModule } from '@angular/core';
 // Components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { RepairsComponent } from './repairs/repairs.component';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { MenuComponent } from './menu/menu.component';
+import { ClientProfileComponent } from './client-profile/client-profile.component';
+import { DiyComponent } from './diy/diy.component';
 
 // Routing
 import {RouterModule, Routes} from '@angular/router';
@@ -30,12 +31,14 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 import {MatProgressBarModule} from '@angular/material';
 
+
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'menu', component: MenuComponent},
-  {path: 'contact', component: ContactComponent},
   {path: 'repairs', component: RepairsComponent},
   {path: 'tickets', component: TicketsComponent},
+  {path: 'profile', component: ClientProfileComponent},
+  {path: 'diy', component: DiyComponent},
   {path: 'tickets/:ticketId', component: TicketDetailsComponent},
   {path: '**', component: NotfoundComponent}
 ];
@@ -43,13 +46,14 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent,
     TicketsComponent,
     RepairsComponent,
     TicketDetailsComponent,
     HomeComponent,
     NotfoundComponent,
-    MenuComponent
+    MenuComponent,
+    ClientProfileComponent,
+    DiyComponent
   ],
   imports: [
     BrowserModule,

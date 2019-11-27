@@ -1,6 +1,6 @@
 <table mat-table [dataSource]="displayTickets">
-  <ng-container matColumnDef="clientNumber">
-    <th mat-header-cell *matHeaderCellDef> Client Nr. </th>
+  <ng-container matColumnDef="ticketNumber">
+    <th mat-header-cell *matHeaderCellDef> Ticket Nr. </th>
     <td mat-cell *matCellDef="let Ticket"> {{Ticket.ticketNumber}} </td>
   </ng-container>
   <ng-container matColumnDef="firstName">

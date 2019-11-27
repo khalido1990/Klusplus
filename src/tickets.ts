@@ -1,4 +1,5 @@
 import {Ticket} from './Ticket';
+import {Client} from './Client';
 
 export const tickets: Ticket[] = [
   {

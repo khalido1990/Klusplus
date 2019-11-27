@@ -9,7 +9,7 @@ import {Ticket} from '../../ticket';
   styleUrls: ['./tickets.component.scss']
 })
 export class TicketsComponent implements OnInit {
-  displayedColumns: string[] = ['clientNumber', 'firstName', 'lastName', 'progress', 'details'];
+  displayedColumns: string[] = ['ticketNumber', 'firstName', 'lastName', 'progress', 'details'];
   tickets = tickets;
   displayTickets: MatTableDataSource<Ticket>;
   constructor() {
